@@ -7,7 +7,7 @@ class PersonaTestCase(unittest.TestCase):
 
    def setUp(self):
       self.persona1 = Persona(nombre='Alejandra', edad=25)
-      self.persona2 = Persona(nombre='Diego', edad=22)
+      self.persona2 = Persona(nombre='armando', edad=22)
       self.persona3 = Persona(nombre='Alejandra', edad=25)
       self.persona4 = Persona(nombre='Diana', edad=25)
       self.grupo = [self.persona1, self.persona2, self.persona3]
@@ -25,7 +25,7 @@ class PersonaTestCase(unittest.TestCase):
    def test_asingacion(self):
       self.persona2.asignar_edad(28)
       self.persona2.asignar_nombre("Felipe")
-      self.assertFalse(self.persona2.dar_nombre()=='Diego')
+      self.assertTrue(self.persona2.dar_nombre()=='Diego')
       self.assertFalse(self.persona2.dar_edad()==22)
       self.assertTrue(self.persona2.dar_nombre()=='Felipe')
       self.assertTrue(self.persona2.dar_edad()==28)
