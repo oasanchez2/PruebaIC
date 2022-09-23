@@ -25,7 +25,7 @@ class PersonaTestCase(unittest.TestCase):
    def test_asingacion(self):
       self.persona2.asignar_edad(28)
       self.persona2.asignar_nombre("Felipe")
-      self.assertTrue(self.persona2.dar_nombre()=='Diego')
+      self.assertFalse(self.persona2.dar_nombre()=='Diego')
       self.assertFalse(self.persona2.dar_edad()==22)
       self.assertTrue(self.persona2.dar_nombre()=='Felipe')
       self.assertTrue(self.persona2.dar_edad()==28)
